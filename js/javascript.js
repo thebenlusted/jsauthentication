@@ -1,5 +1,3 @@
-window.localStorage.clear();
-
 if(!localStorage.getItem('user')) {
   window.localStorage.setItem('user','username');
 }
@@ -68,4 +66,8 @@ function signup() {
   //Password should be 8+ characters long
   //Check if password contains an uppercase letter and special character ($,!,%)
   //Username can be whatever
+}
+
+function clearDate() {
+  
 }
