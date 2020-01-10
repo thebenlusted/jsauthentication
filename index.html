@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Please Sign In!</title>
+  <title>JS Authentication Demo</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:500,900&display=swap"
   rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="styles.css">
@@ -9,8 +9,10 @@
   <script type="text/javascript" src="js/javascript.js"></script>
   <body>
     <div class="page-cont">
-      <h1 id="site-title">Javascript Authentication.</h1>
-    <div class="login-cont">
+      <h1 id="site-title">// Javascript Authentication.</h1>
+      <h1 id="site-title-badge">JA.</h1>
+      <h1 id="tagline">A reactive JavaScript authentication demo.</h1>
+    <div class="login-cont" id="logCont">
     <form class="login-form">
         <input type="text" name="user" placeholder="Username"><br><br>
         <input type="text" name="pass" placeholder="Password"><br><br>
@@ -18,12 +20,19 @@
       </form>
       </div>
 
-      <div class="signup-cont">
+      <div class="signup-cont" id="signCont">
+        <form class="login-form">
+          <input type="text" name="user" placeholder="Username" id="i-user" required><br><br>
+            <input type="text" name="pass" placeholder="Password" id="i-pass" required><br><br>
+            <button onclick="signup()" type="button" id="submit-btn">Sign up</button><br><br><br><br>
+            <input type="checkbox" required name="agreed" value="Agree" id="i-agree">
+            <label>I understand this is just a test.</label>
+        </form>
       </div>
     </div>
     </body>
 
     <footer>
-      <h1>&copy; Ben Lusted 2020</h1>
+      <h1 style="font-size: 18px;">&copy; Ben Lusted 2020</h1>
     </footer>
     </html>

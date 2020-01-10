@@ -1,3 +1,4 @@
+html { overflow: hidden; }
 body {
   margin:0;
 }
@@ -6,36 +7,109 @@ body {
   background-size: 400%,400%;
   margin:0;
   padding: 0;
-  animation:bg-change 10s ease-in-out infinite;
+  animation:bg-change 20s ease-in-out infinite;
   height:100vh;
 }
+/* IMPORTANT */
 .login-cont {
   display:none;
   position: relative;
   width:100%;
   height:100vh;
+  animation: fadeIn 1s ease-in-out 1;
 }
+/* IMPORTANT */
 .signup-cont {
   display:none;
+  position: relative;
+  width:100%;
+  height:100vh;
+  animation: fadeIn 1s ease-in-out 1;
+  text-align: center;
+  margin:0;
+  padding: 0;
+}
+.signup-cont h1 {
+  display:block;
+  position: absolute;
+  color:white;
+  font-family: 'Roboto';
+  font-size:29px;
+  margin: 0;
+  padding: 0;
+  left:50%;
+  top:18%;
+  transform:translate(-50%,20%);
+}
+.login-form #i-agree {
+  position: absolute;
+  font-family: 'Roboto';
+  font-size:18px;
+  color:white;
+  width:25px;
+  height:25px;
+  cursor: pointer;
+  left:0;
+  margin:0;
+  padding: 0;
+}
+.login-form label {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-size:18px;
+  color:white;
+  position: relative;
+  left:10px;
 }
 #site-title {
+  display:block;
   margin: auto;
   padding: 0;
   color: white;
+  font-size:3.5vw;
   font-family: 'Roboto';
-  font-size:6vw;
-  width:50%;
-  transform:translateY(110%);
+  width:30%;
+  transform:translateY(50%);
   text-align: center;
   border-style: solid;
   border-color: white;
   border-width: thin;
   animation: fadeIn 1s ease-in-out 1;
 }
+#site-title-badge {
+  display:none;
+  margin:auto;
+  padding: 0;
+  color:white;
+  font-size:60px;
+  font-family: 'Roboto';
+  width:94px;
+  height:80px;
+  transform: translateY(50%);
+  text-align: center;
+  border-style: solid;
+  border-color:white;
+  border-width:thin;
+  letter-spacing: -4px;
+  animation: fadeIn 1s ease-in-out 1;
+}
+#tagline {
+  margin:auto;
+  padding: 0;
+  color:white;
+  font-size:32px;
+  width:50%;
+  font-family: 'Roboto';
+  text-align: center;
+  letter-spacing: -2px;
+  animation: fadeIn 1s ease-in-out 1;
+  transform:translateY(200px);
+}
 .login-form {
   position: absolute;
   left:50%;
-  top:50%;
+  top:30%;
   transform:translate(-50%,0);
   animation: fadeIn 1s ease-in-out 1;
 }
@@ -55,7 +129,7 @@ body {
   border-style:solid;
   width:50%;
   height:44px;
-  float:left;
+  float:none;
   font-family: 'Roboto';
   font-size:20px;
 }
@@ -64,7 +138,10 @@ body {
   cursor: pointer;
   width:52%;
 }
-
+#val-btn {
+  position: absolute;
+  left:10%;
+}
 
 
 footer {
@@ -94,6 +171,11 @@ footer {
 
 
 
-@media screen and (max-width: 768px) {
-
+@media screen and (min-width: 769px) {
+  #site-title { display:block; }
+  #site-title-badge { display:none; }
+}
+@media screen and (max-width:768px) {
+  #site-title { display:none; }
+  #site-title-badge { display:block; }
 }
