@@ -44,6 +44,22 @@ function validate_info() {
   var this_user = localStorage.getItem('user');
   console.log(this_user);
 }
+var characters = ['!', '@', '#', '$','%','^','&','*','(',')'];
+str = "";
+var arrLength = characters.length;
+function checkForCharacters(word) {
+  str = word;
+  for(var c = 0; c < arrLength; c++) {
+    console.log(characters[c]);
+    if(str.includes(characters[c])) {
+      console.log("Word: '" + str + "' contains " + "'" + characters[c] + "'");
+      break;
+    }
+    if (arrLength - 1 === c) {
+      console.log("Password does not contain a special character");
+    }
+  }
+}
 
 function signup() {
   var new_user;
@@ -54,20 +70,37 @@ function signup() {
     console.log(new_user);
   } else {
     console.log("No username recorded");
+    alert("No username entered.")
   }
   if(document.getElementById("i-pass").value != "") {
     new_pass = document.getElementById("i-pass").value;
     window.localStorage.setItem('pass',new_pass);
-    console.log(new_pass);
-  } else {
-    console.log("No password recorded");
-  }
+    } else {
+      console.log("No password recorded");
+      alert("No password entered.")
+    }
 
+    if (new_pass.length < 8) {
+      alert("Password must be 8 or more characters.");
+    } else {
+      console.log(new_pass);
+    }
+
+  if(document.querySelector('#i-agree').checked) {
+    console.log("they agreed, sir.");
+  } else {
+    alert("Please accept the terms. >:(");
+  }
   //Password should be 8+ characters long
   //Check if password contains an uppercase letter and special character ($,!,%)
   //Username can be whatever
 }
 
-function clearDate() {
-  
+function clearData() {
+  //Clicking 'Clear Data' will clear the localStorage
+  //and then reload the page - which will bring you back to the 'Sign Up' page.
+
+  alert("Login data has been cleared - set new username and password.");
+  window.localStorage.clear();
+  location.reload(false);
 }

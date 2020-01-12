@@ -18,20 +18,21 @@
         <input type="text" name="pass" placeholder="Password"><br><br>
         <button onclick="validate_info()" id="submit-btn">Login</button>
       </form>
-      </div>
-
+    </div>
       <div class="signup-cont" id="signCont">
         <form class="login-form">
-          <input type="text" name="user" placeholder="Username" id="i-user" required><br><br>
-            <input type="text" name="pass" placeholder="Password" id="i-pass" required><br><br>
+          <input type="text" name="user" placeholder="Username" id="i-user" /><br><br>
+            <input type="text" name="pass" placeholder="Password" id="i-pass" /><br><br>
             <button onclick="signup()" type="button" id="submit-btn">Sign up</button><br><br><br><br>
-            <input type="checkbox" required name="agreed" value="Agree" id="i-agree">
+            <input type="checkbox" name="agreed" value="Agree" id="i-agree" />
             <label>I understand this is just a test.</label>
         </form>
       </div>
     </div>
+    <div class="clear-btn-cont">
+    <button onclick="clearData()" type="button" id="clear-btn">Clear Data</button>
+    </div>
     </body>
-
     <footer>
       <h1 style="font-size: 18px;">&copy; Ben Lusted 2020</h1>
     </footer>
